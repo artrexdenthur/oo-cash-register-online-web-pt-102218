@@ -9,13 +9,13 @@ class CashRegister
   end
   
   def add_item(item, price, quantity = 1)
-    total += price * quantity
+    @total += price * quantity
     @items_arr << item
   end
   
   def apply_discount
     if discount
-      total -= discount
+      @total -= discount
       puts "After the discount, the total comes to #{total}."
     else
       puts "There is no discount to apply."
